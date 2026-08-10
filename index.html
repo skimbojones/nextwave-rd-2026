@@ -14,12 +14,12 @@ body{font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;color:var(--i
 button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
 .behind{position:fixed;inset:0;background:radial-gradient(120% 80% at 50% -10%,var(--wash),rgba(255,255,255,0) 55%),var(--paper)}
 .stage{position:fixed;inset:0;z-index:10;display:flex;align-items:center;justify-content:center;padding:40px}
-.card{width:min(1180px,100%);height:min(680px,86vh);display:grid;grid-template-columns:48% 1fr;background:var(--panel);border:1px solid rgba(26,26,26,.08);border-radius:24px;overflow:hidden;box-shadow:0 30px 70px rgba(26,26,26,.30),0 1px 0 rgba(255,255,255,.6) inset;animation:cardin .42s var(--ease)}
+.card{width:min(1180px,100%);height:min(680px,86vh);display:grid;grid-template-columns:56% 1fr;background:var(--panel);border:1px solid rgba(26,26,26,.08);border-radius:24px;overflow:hidden;box-shadow:0 30px 70px rgba(26,26,26,.30),0 1px 0 rgba(255,255,255,.6) inset;animation:cardin .42s var(--ease)}
 @keyframes cardin{from{opacity:0;transform:translateY(16px) scale(.985)}to{opacity:1;transform:none}}
-.visual{position:relative;overflow:hidden;background:#fff}
-.visual img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;transition:opacity .32s var(--ease)}
+.visual{position:relative;overflow:hidden;background:linear-gradient(160deg,#f7f3ea,#efe9dd);display:flex;align-items:center;justify-content:center;padding:22px}
+.visual img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block;border-radius:10px;box-shadow:0 18px 44px rgba(26,26,26,.22);transition:opacity .32s var(--ease)}
 .visual img.contain{object-fit:contain;object-position:center;background:#fff}
-.qnum{position:absolute;bottom:16px;left:20px;z-index:4;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.65)}
+.qnum{position:absolute;bottom:14px;left:22px;z-index:4;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:var(--muted)}
 .body{position:relative;display:flex;flex-direction:column;justify-content:center;padding:52px 58px 96px;background:#fff;min-width:0;overflow:hidden}
 .kind{position:absolute;top:26px;right:28px;padding:9px 18px;border-radius:100px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:800;background:rgba(26,26,26,.86);color:#fff}
 .kind.re{background:#2f4f6f}.kind.fam{background:var(--deep)}.kind.num{background:#4a5d3f}
@@ -38,7 +38,7 @@ ul{margin:10px 0 0 20px}li{font-size:18px;line-height:1.55;color:#33373b;margin:
 .hint{position:fixed;bottom:14px;left:0;right:0;text-align:center;font-size:12px;color:var(--dim);z-index:20;letter-spacing:.02em}
 @media (max-width:900px){
  .stage{padding:0}
- .card{width:100%;height:100%;border-radius:0;grid-template-columns:1fr;grid-template-rows:38% 1fr}
+ .card{width:100%;height:100%;border-radius:0;grid-template-columns:1fr;grid-template-rows:40% 1fr}
  .body{padding:26px 24px 92px;justify-content:flex-start;overflow-y:auto}
  .kind{top:auto;bottom:calc(62% + 14px);right:16px}
  h1{font-size:27px}.card.title h1{font-size:32px}
